@@ -56,7 +56,7 @@ install -s -m 0755 -D ESIF/Products/ESIF_UF/Linux/esif_ufd %{buildroot}%{_sbindi
 install -s -m 0755 -D ESIF/Products/ESIF_CMP/Linux/esif_cmp.so %{buildroot}%{_datadir}/dptf/ufx64/esif_cmp.so
 install -s -m 0755 -D ESIF/Products/ESIF_WS/Linux/esif_ws.so %{buildroot}%{_datadir}/dptf/ufx64/esif_ws.so
 install -m 0644 -D ESIF/Packages/DSP/dsp.dv %{buildroot}%{_sysconfdir}/dptf/dsp.dv
-install -m 0644 -D ESIF/Packages/Installers/linux/dptf.service %{buildroot}%{_unitdir}/dptf.service
+install -m 0644 -D ESIF/Packages/Installers/linux/dptf.service %{buildroot}%{_prefix}/lib/systemd/system/dptf.service
 install -m 0755 -D %{_sourcedir}/dracut-module-setup.sh %{buildroot}%{_prefix}/lib/dracut/modules.d/09dptf/module-setup.sh
 install -m 0644 -D %{_sourcedir}/75-dptf.preset %{buildroot}%{_prefix}/lib/systemd/system-preset/75-dptf.preset
 install -m 0644 -D %{_sourcedir}/00-dptf.conf %{buildroot}%{_sysconfdir}/dracut.conf.d/00-dptf.conf
@@ -87,7 +87,7 @@ dracut -f
 %{_sysconfdir}/dptf/dsp.dv
 %dir %{_prefix}/lib/dracut/modules.d/09dptf/
 %{_prefix}/lib/dracut/modules.d/09dptf/module-setup.sh
-%{_unitdir}/dptf.service
+%{_prefix}/lib/systemd/system/dptf.service
 %{_prefix}/lib/systemd/system-preset/75-dptf.preset
 %{_sysconfdir}/dracut.conf.d/00-dptf.conf
 
