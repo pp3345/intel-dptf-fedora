@@ -11,6 +11,7 @@ Source2:	75-dptf.preset
 Source3:	00-dptf.conf
 Summary:	Intel (R) Dynamic Platform and Thermal Framework
 
+BuildRequires:	git
 BuildRequires:	cmake
 BuildRequires:	readline-devel
 
