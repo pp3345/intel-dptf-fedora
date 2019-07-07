@@ -12,7 +12,11 @@ Source3:	00-dptf.conf
 Summary:	Intel (R) Dynamic Platform and Thermal Framework
 
 BuildRequires:	git
+BuildRequires:	make
+BuildRequires:	gcc
+BuildRequires:	gcc-c++
 BuildRequires:	cmake
+BuildRequires:	glibc-devel
 BuildRequires:	readline-devel
 
 Requires:	readline
