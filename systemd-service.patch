@@ -1,0 +1,20 @@
+diff --git a/ESIF/Packages/Installers/linux/dptf.service b/ESIF/Packages/Installers/linux/dptf.service
+index aa5e7e3..fd56d44 100644
+--- a/ESIF/Packages/Installers/linux/dptf.service
++++ b/ESIF/Packages/Installers/linux/dptf.service
+@@ -1,10 +1,12 @@
+ [Unit]
+-description=Intel(R) Dynamic Platform and Thermal Framework daemon
++Description=Intel(R) Dynamic Platform and Thermal Framework daemon
++DefaultDependencies=no
++Before=systemd-modules-load.service plymouth-start.service sysinit.target
+ 
+ [Service]
+ Type=forking
+ Restart=always
+-ExecStart=/usr/bin/esif_ufd
++ExecStart=/usr/sbin/esif_ufd
+ 
+ [Install]
+-WantedBy=sysinit.target
++WantedBy=multi-user.target
