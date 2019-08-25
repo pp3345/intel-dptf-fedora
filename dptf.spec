@@ -65,9 +65,6 @@ install -m 0644 -D %{_sourcedir}/00-dptf.conf %{buildroot}%{_sysconfdir}/dracut.
 %systemd_post dptf.service
 dracut -f
 
-%preun
-%systemd_preun dptf.service
-
 %postun
 %systemd_postun dptf.service
 dracut -f
