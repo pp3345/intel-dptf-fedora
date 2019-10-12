@@ -22,6 +22,7 @@ BuildRequires:	readline-devel
 Requires:	readline
 Requires:	dracut
 Requires:	systemd
+%{?systemd_requires}
 
 # patch systemd service for Fedora and early loading
 Patch0: systemd-service.patch
