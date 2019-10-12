@@ -2,7 +2,7 @@
 
 Name: 		dptf
 Version: 	8.4.10401
-Release: 	1%{?dist}.pp3345
+Release: 	2%{?dist}.pp3345
 License:	Apache 2.0
 URL:		https://github.com/intel/dptf
 Source0:	https://github.com/intel/dptf/archive/%{version}.tar.gz
@@ -93,5 +93,8 @@ dracut -f
 %{_sysconfdir}/dracut.conf.d/00-dptf.conf
 
 %changelog
+* Sat Oct 12 2019 Yussuf Khalil <dev@pp3345.net> - 8.4.10401-2
+- Add %%systemd_requires
+
 * Sun Jul 07 2019 Yussuf Khalil <dev@pp3345.net> - 8.4.10401-1
 - Initial release
